@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeflow Academy</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Timeflow by Indus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 
         <nav id="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="admissions.html">Admissions</a></li>
@@ -30,10 +31,48 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Master the Future of Tech.</h1>
-            <p>Minimalist design. Maximum logic. Join our specialized computer courses designed for the modern web and software industry.</p>
-            <a href="courses.html" class="btn">View All Courses</a>
+        <section class="hero page-section animate-on-load">
+            <h1>Learn. Code. Ship.</h1>
+            <p>Master modern web and software development with our minimalist, logic-first curriculum.</p>
+            <a href="courses.html" class="btn">Explore Courses</a>
+        </section>
+
+        <section class="courses-preview page-section">
+            <h2 class="section-title">Essential Paths</h2>
+            <div class="course-grid staggered-cards">
+                <div class="course-card">
+                    <h3>Frontend Development</h3>
+                    <p>React, modern JS, performance, and user experience.</p>
+                </div>
+                <div class="course-card">
+                    <h3>Backend Engineering</h3>
+                    <p>Node.js, databases, and scalable system design.</p>
+                </div>
+                <div class="course-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Typography, layout, and visual logic.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features page-section">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h4>Practical Code</h4>
+                    <p>Build real products, not just theory exercises.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h4>Deep Logic</h4>
+                    <p>Understand the 'why' behind the code, not just the 'how'.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💼</span>
+                    <h4>Career Ready</h4>
+                    <p>Get the modern tools and mindset that top companies want.</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -41,6 +80,6 @@
         <p>&copy; 2026 Timeflow by Indus. All rights reserved.</p>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
