@@ -1,0 +1,156 @@
+/* Google Fonts - 'Inter' font bahut clean aur minimal lagta hai */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg-white: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #888888;
+  --border-light: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; /* Small minimal font */
+  line-height: 1.7;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-muted);
+}
+
+/* Header & Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Menu Button (Hidden on Desktop) */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.mobile-menu-btn span {
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-dark);
+}
+
+/* Main Content */
+main {
+  padding: 80px 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+.hero {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid var(--text-dark);
+  background: var(--bg-white);
+  color: var(--text-dark);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: var(--text-dark);
+  color: var(--bg-white);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 5%;
+  border-top: 1px solid var(--border-light);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  nav {
+    display: none; /* JS se toggle hoga */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
+    padding: 20px 0;
+  }
+  
+  nav.active {
+    display: block;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
