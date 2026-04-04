@@ -1,11 +1,10 @@
-/* Google Fonts - 'Inter' font bahut clean aur minimal lagta hai */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 :root {
   --bg-white: #ffffff;
-  --text-dark: #222222;
-  --text-muted: #888888;
-  --border-light: #f0f0f0;
+  --text-main: #1a1a1a;
+  --text-light: #888888;
+  --border-color: #f2f2f2;
 }
 
 * {
@@ -16,51 +15,50 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: 13px; /* Small minimal font */
-  line-height: 1.7;
+  font-size: 13px; /* Small font requirement */
+  line-height: 1.8;
   background-color: var(--bg-white);
-  color: var(--text-dark);
+  color: var(--text-main);
   -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
-  color: var(--text-dark);
-  transition: color 0.3s ease;
+  color: var(--text-main);
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--text-muted);
+a:hover, a.active {
+  color: var(--text-light);
 }
 
-/* Header & Navigation */
+/* Header & Nav */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  border-bottom: 1px solid var(--border-light);
+  padding: 24px 5%;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 28px;
 }
 
 nav a {
   font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: lowercase; /* Adds to the minimal vibe */
+  letter-spacing: 0.3px;
 }
 
-/* Mobile Menu Button (Hidden on Desktop) */
 .mobile-menu-btn {
   display: none;
   flex-direction: column;
@@ -69,88 +67,79 @@ nav a {
 }
 
 .mobile-menu-btn span {
-  width: 20px;
-  height: 2px;
-  background-color: var(--text-dark);
+  width: 18px;
+  height: 1px; /* Very thin minimal lines */
+  background-color: var(--text-main);
 }
 
-/* Main Content */
+/* Main Hero Section */
 main {
-  padding: 80px 5%;
-  max-width: 1000px;
+  padding: 100px 5%;
+  max-width: 900px;
   margin: 0 auto;
-  min-height: 60vh;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
   text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 450px;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 300;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
 
 .hero p {
-  color: var(--text-muted);
-  margin-bottom: 30px;
+  color: var(--text-light);
+  margin-bottom: 32px;
+  font-size: 13px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 25px;
-  border: 1px solid var(--text-dark);
-  background: var(--bg-white);
-  color: var(--text-dark);
+  padding: 10px 24px;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
   font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .btn:hover {
-  background: var(--text-dark);
-  color: var(--bg-white);
+  border-color: var(--text-main);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 40px 5%;
-  border-top: 1px solid var(--border-light);
   font-size: 11px;
-  color: var(--text-muted);
+  color: var(--text-light);
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: flex;
-  }
+  .mobile-menu-btn { display: flex; }
   
   nav {
-    display: none; /* JS se toggle hoga */
+    display: none;
     position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
+    top: 70px; left: 0; width: 100%;
     background: var(--bg-white);
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-color);
     padding: 20px 0;
   }
   
-  nav.active {
-    display: block;
-  }
+  nav.active { display: block; }
   
   nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
   }
 }
