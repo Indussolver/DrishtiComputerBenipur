@@ -515,3 +515,112 @@ p { color: var(--muted); margin-bottom: 2rem; }
         align-items: center;
     }
 }
+/* --- Student Testimonials Section --- */
+.testimonials {
+    padding: 5rem 1.5rem;
+    background-color: var(--surface-color, #f9fafb); /* Light background to pop the cards */
+}
+
+/* Horizontal Scroll for Mobile (Native App Feel, Zero JS, Zero Heat) */
+.testimonial-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 2rem; /* Space for scrollbar */
+    /* Hide scrollbar for clean UI in modern browsers */
+    scrollbar-width: none; 
+}
+
+.testimonial-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Testimonial Cards */
+.testi-card {
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    min-width: 280px; /* Mobile par card ki width fix */
+    max-width: 320px;
+    flex-shrink: 0; /* Cards sikudenge nahi */
+    scroll-snap-align: start; /* Scroll karte hi perfectly center me snap honge */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Area (DP & Name) */
+.testi-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Pure CSS DP (Profile Picture) Styling */
+.dp {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+/* DP Colors to make it look dynamic and real */
+.dp-blue { background-color: #3b82f6; }
+.dp-green { background-color: #10b981; }
+.dp-pink { background-color: #ec4899; }
+.dp-orange { background-color: #f97316; }
+.dp-purple { background-color: #8b5cf6; }
+
+.testi-info h4 {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0 0 0.1rem 0;
+}
+
+.stars {
+    color: #fbbf24; /* Golden yellow */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Review Text */
+.testi-text {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic; /* Quote feel */
+}
+
+/* --- Tablet & Desktop Layout --- */
+@media (min-width: 768px) {
+    .testimonial-grid {
+        /* Badi screen par slider ki jagah Grid ban jayega */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        overflow-x: visible; /* Scroll hata denge */
+        padding-bottom: 0;
+    }
+
+    .testi-card {
+        min-width: 100%;
+        max-width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .testi-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        border-color: #d1d5db;
+    }
+}
