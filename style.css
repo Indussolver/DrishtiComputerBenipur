@@ -470,42 +470,102 @@ p { color: var(--muted); margin-bottom: 2rem; }
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* --- Mobile / Phone View (Max width 768px) --- */
+/* --- Navbar Base --- */
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1.5rem; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    align-items: center; 
+    position: relative; /* Zaroori hai */
+    z-index: 1000; /* Menu ko sabse upar rakhne ke liye */
+}
+
+.logo { font-weight: 600; font-size: 1.2rem; }
+
+/* --- Mobile Menu Button Styling --- */
+.mobile-menu-btn {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Button hamesha menu ke upar rahega */
+}
+
+.mobile-menu-btn .bar {
+    height: 2px;
+    width: 100%;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Cross (X) Animation */
+.mobile-menu-btn.open .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.mobile-menu-btn.open .bar:nth-child(2) { opacity: 0; }
+.mobile-menu-btn.open .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* --- Mobile / Phone View --- */
 @media (max-width: 768px) {
     .mobile-menu-btn {
-        display: flex; /* Phone par menu button dikhega */
+        display: flex; /* Phone me button dikhega */
     }
 
     .nav-links {
         position: absolute;
-        top: 70px; /* Navbar ke theek niche */
+        top: 70px; /* Navbar ke niche */
         left: 0;
         width: 100%;
         background-color: var(--bg);
+        display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        z-index: 999; /* Menu ko dusre sections ke upar laane ke liye */
         
-        /* Default state: Hide menu */
+        /* Hide state */
         opacity: 0;
         transform: translateY(-10px);
-        pointer-events: none;
+        pointer-events: none; /* Click disable jab hide ho */
         transition: all 0.3s ease;
     }
 
+    /* Active state (Jab open ho) */
     .nav-links.active {
-        /* Open state: Show menu */
         opacity: 1;
         transform: translateY(0);
-        pointer-events: auto;
+        pointer-events: auto; /* Click enable ho jayega */
     }
 
     .nav-links a {
         margin: 1rem 0;
         font-size: 1.1rem;
-        margin-left: 0; /* Resetting desktop margin */
+        text-decoration: none;
+        color: var(--muted);
     }
+}
+
+/* --- Desktop View --- */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        align-items: center;
+        opacity: 1; /* Desktop par hamesha dikhega */
+        pointer-events: auto;
+    }
+    .nav-links a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--muted);
+        transition: 0.3s;
+    }
+    .nav-links a.active, .nav-links a:hover { color: var(--primary); }
 }
 
 /* --- Desktop View (Min width 769px) --- */
