@@ -223,3 +223,56 @@ p { color: var(--muted); margin-bottom: 2rem; }
         grid-template-columns: repeat(4, 1fr); /* Desktop par 4 column, ek sidhi line me */
     }
 }
+/* --- About Intro Section --- */
+.about-intro {
+    padding: 5rem 1.5rem;
+    background-color: var(--bg); /* Clean white background */
+}
+
+/* Minimalist layout with an accent border */
+.about-content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--primary); /* High-contrast blue accent */
+    text-align: left;
+}
+
+.sub-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.about-content h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.about-content p {
+    font-size: 0.95rem; /* Small, readable typography */
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Tablet & Desktop View Enhancements */
+@media (min-width: 640px) {
+    .about-content {
+        padding-left: 2rem;
+    }
+    
+    .about-content h2 {
+        font-size: 2.25rem; /* Larger heading for bigger screens */
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+    }
+}
