@@ -437,3 +437,81 @@ p { color: var(--muted); margin-bottom: 2rem; }
         height: 500px; /* Taller image on desktop */
     }
 }
+/* --- Mobile Menu Button Styling --- */
+.mobile-menu-btn {
+    display: none; /* Desktop par hide rahega */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Menu ke upar rakhne ke liye */
+}
+
+/* Menu ki teen lines (bars) */
+.mobile-menu-btn .bar {
+    height: 2px;
+    width: 100%;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Button click hone par Cross (X) banne ka animation */
+.mobile-menu-btn.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobile-menu-btn.open .bar:nth-child(2) {
+    opacity: 0; /* Beech wali line gayab */
+}
+.mobile-menu-btn.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Mobile / Phone View (Max width 768px) --- */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex; /* Phone par menu button dikhega */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Navbar ke theek niche */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        
+        /* Default state: Hide menu */
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        /* Open state: Show menu */
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        margin-left: 0; /* Resetting desktop margin */
+    }
+}
+
+/* --- Desktop View (Min width 769px) --- */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex; /* Badi screen par links line me dikhenge */
+        align-items: center;
+    }
+}
