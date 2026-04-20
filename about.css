@@ -195,3 +195,76 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; }
         font-size: 1.15rem !important;
     }
 }
+/* --- Our Mission Section --- */
+.mission-section {
+    padding: 2rem 1.5rem 6rem; /* Top padding thoda kam rakha hai space balance ke liye */
+    background-color: var(--bg, #ffffff);
+}
+
+.mission-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #f8fafc; /* Very soft slate/gray background */
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid var(--primary); /* Blue accent at the top */
+    border-radius: var(--radius);
+    padding: 3rem 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02); /* Extremely soft shadow */
+    text-align: center;
+}
+
+/* Icon Styling */
+.mission-icon {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem auto;
+    background-color: #eff6ff; /* Match with other icon backgrounds */
+    border-radius: 50%;
+    color: var(--primary);
+}
+
+.mission-header h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+/* Content Formatting */
+.mission-content {
+    text-align: left; /* Mobile par left align padhne me asaan hota hai */
+}
+
+.mission-content p {
+    font-size: 0.95rem; /* Clean typography */
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+.mission-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Tablet & Desktop View --- */
+@media (min-width: 768px) {
+    .mission-container {
+        padding: 4rem 5rem; /* Andar space badhaya */
+    }
+
+    .mission-header h2 {
+        font-size: 2rem;
+    }
+
+    .mission-content {
+        text-align: center; /* Badi screen par center-aligned text premium lagta hai */
+    }
+
+    .mission-content p {
+        font-size: 1rem;
+    }
+}
