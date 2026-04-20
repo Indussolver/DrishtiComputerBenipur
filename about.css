@@ -287,3 +287,81 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; }
         font-size: 1rem;
     }
 }
+/* --- Why We Started Section --- */
+.why-started {
+    padding: 5rem 1.5rem;
+    /* Vision me gray background tha, isliye isko pure white rakha hai for clean contrast break */
+    background-color: var(--bg, #ffffff); 
+}
+
+.story-container {
+    /* Padhne ke liye sabse best chaudaai (width) 700px hoti hai, jisse aankhein thakti nahi hain */
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; /* Story telling ke liye center align best lagta hai */
+}
+
+/* Header & Icon Styling */
+.story-header {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-icon {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #fffbeb; /* Light yellow background idea/bulb ke liye */
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.story-header h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+/* A minimal decorative line under the heading */
+.divider-line {
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+/* Story Content Formatting */
+.story-content p {
+    font-size: 0.95rem; /* Clean and minimal typography */
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    text-align: left; /* Phone par text left align jyada clear dikhta hai */
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 768px) {
+    .why-started {
+        padding: 6rem 2rem;
+    }
+
+    .story-header h2 {
+        font-size: 2rem;
+    }
+
+    .story-content p {
+        font-size: 1rem;
+        text-align: center; /* Badi screen par story ko center align padhna achha lagta hai */
+    }
+}
