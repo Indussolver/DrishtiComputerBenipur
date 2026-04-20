@@ -3,3 +3,130 @@
 
 .content { padding: 4rem 1.5rem; max-width: 800px; margin: 0 auto; text-align: center; }
 h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+/* --- Founder's Message Section --- */
+.founder-message {
+    padding: 4rem 1.5rem;
+    background-color: var(--surface-color, #f9fafb); /* Soft off-white background */
+}
+
+/* Card Container */
+.founder-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #f3f4f6;
+    border-radius: var(--radius);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column; /* Mobile first: Ek ke niche ek */
+    gap: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02); /* Very subtle shadow */
+}
+
+/* Profile Image Setup */
+.founder-image-wrapper {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto; /* Center on mobile */
+}
+
+.founder-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Perfect circle */
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #eff6ff; /* Soft blue ring */
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Content Area */
+.founder-content {
+    position: relative;
+    flex-grow: 1;
+}
+
+.founder-content h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* Big Decorative Quote Mark (Pure CSS, no heavy image needed) */
+.quote-mark {
+    font-size: 6rem;
+    color: #eff6ff;
+    position: absolute;
+    top: -25px;
+    left: -15px;
+    z-index: 0;
+    line-height: 1;
+    font-family: Georgia, serif; /* Traditional serif for quotes */
+    user-select: none;
+}
+
+.message-text {
+    position: relative;
+    z-index: 1; /* Text ko quote mark ke upar rakhne ke liye */
+}
+
+.message-text p {
+    font-size: 0.95rem; /* Clean, minimal typography */
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.message-text p:last-child {
+    margin-bottom: 2rem;
+}
+
+/* Name and Title Plate */
+.founder-name {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-name strong {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.founder-name span {
+    font-size: 0.85rem;
+    color: var(--primary); /* High contrast blue identifier */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Tablet & Desktop View --- */
+@media (min-width: 768px) {
+    .founder-container {
+        flex-direction: row; /* Side-by-side layout on bigger screens */
+        align-items: center;
+        padding: 4rem 3rem;
+        gap: 4rem;
+    }
+
+    .founder-image-wrapper {
+        width: 250px;
+        margin: 0; /* Remove auto margin on desktop */
+        flex-shrink: 0;
+    }
+
+    .founder-content h2 {
+        font-size: 1.85rem;
+    }
+}
