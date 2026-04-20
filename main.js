@@ -12,17 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeElements.forEach(el => observer.observe(el));
 });
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // --- 1. Aapka purana Fade-in animation code ---
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-    fadeElements.forEach(el => observer.observe(el));
 
 
     // --- 2. NAYA KODE: Mobile Menu Toggle Logic ---
