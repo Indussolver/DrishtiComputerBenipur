@@ -2,3 +2,121 @@
 
 .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .photo { background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #999; }
+/* --- FAQ Section --- */
+.faq-section {
+    padding: 5rem 1.5rem;
+    max-width: 800px; /* Narrower width for reading comfort */
+    margin: 0 auto;
+    background-color: var(--bg);
+}
+
+.faq-section .section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-section .section-heading h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.faq-section .section-heading p {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+/* FAQ Container & Items */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Slight space between questions */
+}
+
+.faq-item {
+    background-color: var(--surface-color, #f9fafb);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    overflow: hidden; /* Keeps things clean when opened */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on the whole block */
+.faq-item:hover {
+    border-color: #d1d5db;
+}
+
+/* Summary Tag (The Question) */
+.faq-item summary {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none; /* Removes default triangle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none; /* Prevents text highlighting on double click */
+}
+
+/* Removes default triangle in Safari/Chrome */
+.faq-item summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* Custom (+) and (-) Icons using CSS */
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+/* When the details tag is open, change '+' to '−' */
+.faq-item[open] summary::after {
+    content: '−'; 
+    color: var(--text);
+}
+
+/* Open State Styling */
+.faq-item[open] {
+    background-color: var(--bg);
+    border-color: var(--primary);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.05);
+}
+
+.faq-item[open] summary {
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* FAQ Content (The Answer) */
+.faq-content {
+    padding: 1.25rem 1.5rem;
+}
+
+.faq-content p {
+    font-size: 0.9rem; /* Clean, minimal typography */
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Smooth fade-in for the text content */
+.faq-item[open] .faq-content {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
