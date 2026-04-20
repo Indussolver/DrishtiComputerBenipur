@@ -3,83 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drishti Computer Classes | Benipur</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Drishti Computer Benipur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
+    <nav class="navbar">
         <div class="logo">Drishti.</div>
-        
-        <div class="mobile-menu-btn" id="menu-btn">
-            <span></span><span></span><span></span>
-        </div>
+    </nav>
 
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
+    <header class="hero" id="home">
+        <div class="hero-content fade-in">
+            <h1>Learn Computer Skills That Build Your Future</h1>
+            <p>Join Drishti Computer Benipur and master ADCA, Tally, Excel and more.</p>
+            <div class="hero-btns">
+                <a href="#courses" class="btn primary-btn">Explore Courses</a>
+                <a href="#footer" class="btn secondary-btn">Contact Us</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="hero page-section animate-on-load">
-            <h1>Empowering Benipur with Tech.</h1>
-            <p>Drishti Computer Classes provides practical, high-quality training in ADCA, Tally Prime, and essential computer skills right here in Darbhanga.</p>
-            <a href="courses.html" class="btn">View Our Courses</a>
-        </section>
+    <section class="highlights fade-in">
+        <div class="card highlight-card">
+            <span class="icon">🎓</span>
+            <h3>ADCA Certified</h3>
+            <p>Comprehensive diploma to kickstart your career.</p>
+        </div>
+        <div class="card highlight-card">
+            <span class="icon">💻</span>
+            <h3>Practical Training</h3>
+            <p>100% hands-on lab sessions every day.</p>
+        </div>
+        <div class="card highlight-card">
+            <span class="icon">📈</span>
+            <h3>Affordable Fees</h3>
+            <p>Quality local education within your budget.</p>
+        </div>
+    </section>
 
-        <section class="courses-preview page-section">
-            <h2 class="section-title">Popular Programs</h2>
-            <div class="course-grid staggered-cards">
-                <div class="course-card">
-                    <h3>ADCA Program</h3>
-                    <p>Advance Diploma in Computer Application. Master Word, Excel, PowerPoint, and complete office automation.</p>
-                </div>
-                <div class="course-card">
-                    <h3>Tally Prime & GST</h3>
-                    <p>Professional accounting course. Learn computerized accounting, billing, and GST filing for real-world jobs.</p>
-                </div>
-                <div class="course-card">
-                    <h3>Basic & Typing</h3>
-                    <p>Perfect for beginners. Fast keyboard typing and fundamental computer operations to get you started.</p>
-                </div>
+    <section class="courses fade-in" id="courses">
+        <h2>Our Popular Courses</h2>
+        <div class="course-grid">
+            <div class="card course-card">
+                <h3>ADCA</h3>
+                <p>Advanced Diploma in Computer Applications.</p>
+                <a href="#" class="btn-link">Learn More &rarr;</a>
             </div>
-        </section>
-
-        <section class="features page-section">
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">💻</span>
-                    <h4>Practical Labs</h4>
-                    <p>Hands-on practice on modern computers for every student.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">👨‍🏫</span>
-                    <h4>Expert Teachers</h4>
-                    <p>Learn from experienced faculties dedicated to your success.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🎓</span>
-                    <h4>Job Ready</h4>
-                    <p>Curriculum designed to help you get jobs in offices, banks, and businesses.</p>
-                </div>
+            <div class="card course-card">
+                <h3>Tally Prime</h3>
+                <p>Master accounting, inventory, and GST.</p>
+                <a href="#" class="btn-link">Learn More &rarr;</a>
             </div>
-        </section>
-    </main>
+            <div class="card course-card">
+                <h3>MS Excel</h3>
+                <p>Data management and advanced formulas.</p>
+                <a href="#" class="btn-link">Learn More &rarr;</a>
+            </div>
+            <div class="card course-card">
+                <h3>Basic Computer</h3>
+                <p>Fundamentals of OS, typing, and internet.</p>
+                <a href="#" class="btn-link">Learn More &rarr;</a>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Drishti Computer Classes, Benipur (Darbhanga). All rights reserved.</p>
+    <section class="why-us fade-in">
+        <h2>Why Choose Us?</h2>
+        <ul class="features-list">
+            <li><span class="check">✓</span> Experienced Teachers</li>
+            <li><span class="check">✓</span> Hands-on Training</li>
+            <li><span class="check">✓</span> Career Guidance</li>
+            <li><span class="check">✓</span> Local Trusted Institute</li>
+        </ul>
+    </section>
+
+    <section class="cta fade-in">
+        <div class="cta-content">
+            <h2>Start Your Learning Journey Today</h2>
+            <a href="#footer" class="btn primary-btn">Join Now</a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>Drishti Computer Benipur</h3>
+            <p>Location: Benipur, Darbhanga</p>
+            <p>Phone: +91 00000 00000</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+            </div>
+        </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
