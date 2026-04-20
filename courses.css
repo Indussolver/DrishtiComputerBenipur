@@ -407,3 +407,124 @@
         font-size: 1rem;
     }
 }
+/* --- Course FAQs Section --- */
+.faq-section {
+    padding: 5rem 1.5rem;
+    background-color: var(--bg, #ffffff); /* Pure white background */
+}
+
+.faq-container-inner {
+    max-width: 800px; /* Reading ke liye perfect narrow width */
+    margin: 0 auto;
+}
+
+.faq-section .section-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.faq-section .section-heading h2 {
+    font-size: 1.85rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.faq-section .section-heading p {
+    font-size: 1rem;
+    color: var(--muted);
+}
+
+/* FAQ Accordion Layout */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Questions ke beech thoda gap */
+}
+
+.faq-item {
+    background-color: var(--surface-color, #f9fafb);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #d1d5db;
+}
+
+/* The Question (Summary) */
+.faq-item summary {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none; /* Removes default triangle marker */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+/* Hide default marker in Safari/Chrome */
+.faq-item summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* Custom (+) icon */
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+/* Custom (−) icon when open */
+.faq-item[open] summary::after {
+    content: '−'; 
+    color: var(--text);
+}
+
+/* Styling when Question is Opened */
+.faq-item[open] {
+    background-color: var(--bg, #ffffff);
+    border-color: var(--primary);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.05);
+}
+
+.faq-item[open] summary {
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* The Answer (Content) */
+.faq-content {
+    padding: 1.25rem 1.5rem;
+}
+
+.faq-content p {
+    font-size: 0.95rem; /* Clean typography */
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Native CSS Animation for opening */
+.faq-item[open] .faq-content {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
