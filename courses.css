@@ -168,3 +168,110 @@
         font-size: 2.25rem;
     }
 }
+/* --- Batch & Timing Information Section --- */
+.batch-timing {
+    padding: 5rem 1.5rem 6rem;
+    background-color: var(--bg, #ffffff); /* Pure white background */
+}
+
+.timing-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.timing-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main Clock Icon */
+.timing-icon-main {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    background-color: #fef2f2; /* Very soft red/pink to make the clock pop */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.timing-header h2 {
+    font-size: 1.85rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.timing-header p {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Mobile-First Grid (1 Column) */
+.timing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Individual Timing Cards */
+.timing-card {
+    background-color: var(--surface-color, #f9fafb); /* Light gray inside the cards */
+    border: 1px solid #f3f4f6;
+    border-radius: var(--radius);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timing-card:hover {
+    transform: translateY(-4px);
+    background-color: var(--bg, #ffffff); /* Hover karne par card white ho jayega */
+    border-color: #e5e7eb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+}
+
+/* Small Card Icons */
+.timing-icon {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.timing-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+
+.timing-card p {
+    font-size: 0.95rem; /* Clean, minimal text */
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Tablet & Desktop Layout --- */
+@media (min-width: 640px) {
+    .timing-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet par 2 column */
+    }
+}
+
+@media (min-width: 900px) {
+    .timing-grid {
+        grid-template-columns: repeat(3, 1fr); /* Badi screen par teeno ek line me */
+    }
+    
+    .timing-header h2 {
+        font-size: 2.25rem;
+    }
+}
