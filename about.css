@@ -1,1 +1,5 @@
+/* Reuse core styles or link style.css too */
+@import url('style.css');
 
+.content { padding: 4rem 1.5rem; max-width: 800px; margin: 0 auto; text-align: center; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
