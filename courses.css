@@ -275,3 +275,135 @@
         font-size: 2.25rem;
     }
 }
+/* --- Certification Section --- */
+.certification {
+    padding: 5rem 1.5rem;
+    background-color: var(--surface-color, #f9fafb);
+}
+
+.cert-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mobile first: ek ke niche ek */
+    gap: 3rem;
+}
+
+/* Visual Certificate Box (Left Side) */
+.cert-visual {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); /* Soft Premium Gold Background */
+    border: 1px solid #fde68a;
+    border-radius: var(--radius);
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(251, 191, 36, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern/line for the certificate */
+.cert-visual::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px dashed #fbbf24; /* Golden dashed inner border */
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.cert-badge {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    background-color: var(--bg, #ffffff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    z-index: 1; /* Keeps badge above the dashed border */
+}
+
+.cert-graphic {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    z-index: 1;
+}
+
+.cert-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #92400e; /* Deep dark gold/brown text */
+}
+
+.cert-subtitle {
+    font-size: 0.85rem;
+    color: #b45309;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+/* Content Area (Right Side) */
+.text-gold {
+    color: #d97706 !important; /* Gold sub-label instead of default blue */
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.cert-content h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.cert-content p {
+    font-size: 0.95rem; /* Clean typography */
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+.cert-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Tablet & Desktop Layout --- */
+@media (min-width: 768px) {
+    .cert-container {
+        flex-direction: row; /* Badi screen par side-by-side */
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .cert-visual {
+        width: 40%; /* Left side me graphic box */
+        flex-shrink: 0;
+    }
+
+    .cert-content {
+        width: 60%; /* Right side me text */
+    }
+
+    .cert-content h2 {
+        font-size: 2rem;
+    }
+
+    .cert-content p {
+        font-size: 1rem;
+    }
+}
