@@ -71,3 +71,100 @@
         gap: 2rem;
     }
 }
+/* --- Why Choose Our Courses Section --- */
+.why-courses {
+    padding: 5rem 1.5rem;
+    background-color: var(--surface-color, #f9fafb); /* Soft off-white background */
+    border-top: 1px solid #f3f4f6; /* Clean separation line */
+}
+
+.why-courses-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header Tweaks */
+.why-courses .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-courses .section-header h2 {
+    font-size: 1.85rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.why-courses .section-header p {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Mobile-First Grid (1 Column) */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Clean Feature Cards */
+.why-card {
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    text-align: left; /* Text left aligned padhne me asaan lagta hai */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: #d1d5db;
+}
+
+/* Soft Styled Icons */
+.why-icon {
+    font-size: 1.75rem;
+    width: 56px;
+    height: 56px;
+    background-color: #eff6ff; /* Soft blue background */
+    color: var(--primary);
+    border-radius: 14px; /* Slightly square-ish modern border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.why-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+
+.why-card p {
+    font-size: 0.95rem; /* Minimalist typography */
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Tablet & Desktop Layout --- */
+@media (min-width: 768px) {
+    .why-grid {
+        /* Badi screen par ye 2x2 ka premium grid ban jayega */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .why-courses .section-header h2 {
+        font-size: 2.25rem;
+    }
+}
