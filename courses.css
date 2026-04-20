@@ -528,3 +528,90 @@
         transform: translateY(0);
     }
 }
+/* --- Contact / Visit Invitation Section --- */
+.visit-invitation {
+    padding: 6rem 1.5rem;
+    background-color: #eff6ff; /* Soft, welcoming blue background */
+    text-align: center;
+}
+
+.invitation-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Big Friendly Icon */
+.invitation-icon {
+    font-size: 2.2rem;
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary); /* Main blue color */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    /* Icon ke niche soft blue glow/shadow */
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.3); 
+}
+
+.invitation-container h2 {
+    font-size: 1.85rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+/* Invitation Text Formatting */
+.invitation-text p {
+    font-size: 1rem; /* Text thoda clear aur readable */
+    line-height: 1.7;
+    color: #374151; /* Dark gray, blue background par achha dikhta hai */
+    margin-bottom: 1.25rem;
+}
+
+.invitation-text p:last-of-type {
+    margin-bottom: 2.5rem; /* Text aur buttons ke beech gap */
+}
+
+/* Action Buttons Area */
+.invitation-actions {
+    display: flex;
+    flex-direction: column; /* Mobile par ek ke niche ek button */
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Mobile par buttons screen ki width lenge */
+.invitation-actions .btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Secondary Button Override for Blue Background */
+.btn.bg-white {
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #d1d5db;
+}
+
+.btn.bg-white:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 640px) {
+    .invitation-container h2 {
+        font-size: 2.25rem; /* Badi screen par badi heading */
+    }
+
+    .invitation-actions {
+        flex-direction: row; /* Badi screen par aamne-saamne buttons */
+        justify-content: center;
+    }
+
+    .invitation-actions .btn {
+        width: auto; /* Desktop par button apne text ke hisaab se fit hoga */
+    }
+}
