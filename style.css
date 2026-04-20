@@ -276,3 +276,164 @@ p { color: var(--muted); margin-bottom: 2rem; }
         font-size: 1rem;
     }
 }
+/* --- Facilities Section --- */
+.facilities {
+    padding: 6rem 1.5rem;
+    background-color: var(--bg);
+}
+
+.facilities-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mobile first: stacked layout */
+    gap: 3rem;
+}
+
+/* Visual Left Side (Image Placeholder) */
+.facilities-visual {
+    position: relative;
+    width: 100%;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* Ye placeholder hai, jab real image aayegi tab aap img tag use kar lena */
+.image-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #f3f4f6;
+    border: 2px dashed #d1d5db;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Floating Badge on Image */
+.floating-badge {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    background: var(--bg);
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981; /* Green success dot */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Content Right Side */
+.facilities-details {
+    width: 100%;
+}
+
+.facilities-details h2 {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.section-description {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/* Detailed List Formating */
+.facilities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.facility-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.facility-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.facility-icon {
+    font-size: 1.5rem;
+    background: #f9fafb;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.facility-text h3 {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+}
+
+.facility-text p {
+    font-size: 0.85rem; /* Clean, small typography */
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Tablet & Desktop Layout */
+@media (min-width: 900px) {
+    .facilities-container {
+        flex-direction: row; /* Side by side on larger screens */
+        align-items: center;
+        gap: 5rem;
+    }
+    
+    .facilities-visual {
+        width: 45%;
+    }
+    
+    .facilities-details {
+        width: 55%;
+    }
+
+    .image-placeholder {
+        height: 500px; /* Taller image on desktop */
+    }
+}
