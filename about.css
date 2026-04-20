@@ -365,3 +365,438 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; }
         text-align: center; /* Badi screen par story ko center align padhna achha lagta hai */
     }
 }
+/* --- Teaching Approach Section --- */
+.teaching-approach {
+    padding: 5rem 1.5rem;
+    /* Soft background to separate it from the previous white section */
+    background-color: var(--surface-color, #f9fafb); 
+}
+
+.approach-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mobile first: Ek ke niche ek */
+    gap: 2.5rem;
+}
+
+/* Visual Block (Icon & Badge) */
+.approach-visual {
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.approach-icon-box {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    background-color: #f3e8ff; /* Soft purple background for Brain icon */
+    border-radius: 16px; /* Slightly squarish border for modern look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem auto;
+}
+
+.approach-visual h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+/* Small premium badge */
+.practical-tag {
+    display: inline-block;
+    background-color: #ecfdf5; /* Soft green */
+    color: #059669; /* Deep green text */
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+/* Content Area */
+.approach-content h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.approach-content p {
+    font-size: 0.95rem; /* Clean typography */
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+.approach-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 768px) {
+    .approach-container {
+        flex-direction: row; /* Desktop par aamne-saamne */
+        align-items: center; /* Dono ko center me align karega */
+        gap: 4rem;
+    }
+
+    .approach-visual {
+        width: 35%; /* Visual block ko 35% space dega */
+        flex-shrink: 0; /* Box sikudega (shrink) nahi */
+    }
+
+    .approach-content {
+        width: 65%; /* Text area ko 65% space dega */
+    }
+
+    .approach-content h2 {
+        font-size: 2rem;
+    }
+
+    .approach-content p {
+        font-size: 1rem;
+    }
+}
+/* --- Student Focus Section --- */
+.student-focus {
+    padding: 5rem 1.5rem;
+    background-color: var(--bg, #ffffff); /* Pure white background */
+}
+
+.focus-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.focus-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.focus-icon-circle {
+    width: 64px;
+    height: 64px;
+    background-color: #eff6ff; /* Soft blue match */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem auto;
+    color: var(--primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.focus-header h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* Mobile-First Text Grid (1 Column Default) */
+.focus-text-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.focus-column p {
+    font-size: 0.95rem; /* Clean typography */
+    line-height: 1.8;
+    color: var(--muted);
+    margin: 0;
+    text-align: left; /* Phone par padhne me left-align sabse asaan hota hai */
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 768px) {
+    .focus-text-grid {
+        /* Badi screen par ye 2 barabar columns me divide ho jayega */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .focus-header h2 {
+        font-size: 2rem;
+    }
+
+    .focus-column p {
+        font-size: 1rem;
+        /* Editorial look ke liye text ko justify kar sakte hain, par left clean lagta hai */
+    }
+
+    /* Pehle column ke right side me ek patli clean border line aayegi */
+    .focus-column:first-child {
+        border-right: 1px solid #f3f4f6;
+        padding-right: 3rem;
+    }
+}
+/* --- Achievements & Experience Section --- */
+.achievements-section {
+    padding: 6rem 1.5rem 5rem; /* Top padding thoda zyada rakha hai overlap ke liye */
+    background-color: var(--surface-color, #f9fafb);
+}
+
+.achievements-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Award Card Styling */
+.achievement-card {
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 3.5rem 1.5rem 2.5rem; /* Top padding zyada di hai taaki icon ke liye space bache */
+    position: relative; /* Floating icon ko iske hisaab se set karne ke liye */
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+    margin-top: 2rem; /* Icon ke overlap ke liye jagah */
+}
+
+/* Floating Icon (Overlapping the top border) */
+.achievement-icon {
+    width: 76px;
+    height: 76px;
+    background-color: #fff7ed; /* Soft orange/gold background for trophy */
+    border: 4px solid var(--bg, #ffffff); /* Card ke color jaisa thick border */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    position: absolute;
+    top: -38px; /* Icon ko exactly aadha bahar nikalta hai */
+    left: 50%;
+    transform: translateX(-50%); /* Icon ko perfectly center me set karta hai */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.achievement-card h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+/* Content Formatting */
+.achievement-content p {
+    font-size: 0.95rem; /* Clean, minimal typography */
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    text-align: left; /* Phone par text padhne ke liye left alignment best hai */
+}
+
+.achievement-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 768px) {
+    .achievement-card {
+        padding: 4rem 4rem 3rem;
+    }
+    
+    .achievement-card h2 {
+        font-size: 2rem;
+    }
+
+    .achievement-content p {
+        font-size: 1rem;
+        text-align: center; /* Badi screen par centered text ek official statement lagta hai */
+    }
+}
+/* --- Facilities & Environment Section --- */
+.facilities-env {
+    padding: 5rem 1.5rem;
+    background-color: var(--bg, #ffffff); /* Pure white background */
+}
+
+/* Focus Frame Container */
+.env-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    overflow: hidden; /* Box ke bahar kuch na nikle */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02); /* Extremely soft shadow */
+}
+
+/* Top Part (Header with soft background) */
+.env-header {
+    background-color: #f8fafc; /* Very light slate/gray background */
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb; /* Content aur header ke beech ki line */
+}
+
+.env-icon {
+    font-size: 2.2rem;
+    width: 65px;
+    height: 65px;
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #e5e7eb;
+    border-radius: 16px; /* Modern square-ish icon box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.env-header h2 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* Bottom Part (Text Content) */
+.env-content {
+    background-color: var(--bg, #ffffff);
+    padding: 2.5rem 1.5rem;
+}
+
+.env-content p {
+    font-size: 0.95rem; /* Minimalist clean typography */
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    text-align: left; /* Phone par padhne me asaan */
+}
+
+.env-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 768px) {
+    .env-wrapper {
+        /* Badi screen par box ko side-by-side split kar denge */
+        display: flex;
+        align-items: stretch; /* Dono side ki height barabar rahegi */
+    }
+
+    .env-header {
+        width: 35%; /* Left side me header */
+        border-bottom: none;
+        border-right: 1px solid #e5e7eb; /* Line bottom se hatkar right me aa jayegi */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 2rem;
+    }
+
+    .env-content {
+        width: 65%; /* Right side me text */
+        padding: 3.5rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .env-header h2 {
+        font-size: 1.85rem;
+    }
+
+    .env-content p {
+        font-size: 1rem;
+    }
+}
+/* --- Contact / Visit Invitation Section --- */
+.visit-invitation {
+    padding: 6rem 1.5rem;
+    background-color: #eff6ff; /* Soft, welcoming blue background */
+    text-align: center;
+}
+
+.invitation-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Big Friendly Icon */
+.invitation-icon {
+    font-size: 2.2rem;
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary); /* Main blue color */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    /* Icon ke niche soft blue glow/shadow */
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.3); 
+}
+
+.invitation-container h2 {
+    font-size: 1.85rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+/* Invitation Text Formatting */
+.invitation-text p {
+    font-size: 1rem; /* Text thoda clear aur readable */
+    line-height: 1.7;
+    color: #374151; /* Dark gray, blue background par achha dikhta hai */
+    margin-bottom: 1.25rem;
+}
+
+.invitation-text p:last-of-type {
+    margin-bottom: 2.5rem; /* Text aur buttons ke beech gap */
+}
+
+/* Action Buttons Area */
+.invitation-actions {
+    display: flex;
+    flex-direction: column; /* Mobile par ek ke niche ek button */
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Mobile par buttons screen ki width lenge */
+.invitation-actions .btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Secondary Button Override for Blue Background */
+.btn.bg-white {
+    background-color: var(--bg, #ffffff);
+    border: 1px solid #d1d5db;
+}
+
+.btn.bg-white:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 640px) {
+    .invitation-container h2 {
+        font-size: 2.25rem; /* Badi screen par badi heading */
+    }
+
+    .invitation-actions {
+        flex-direction: row; /* Badi screen par aamne-saamne buttons */
+        justify-content: center;
+    }
+
+    .invitation-actions .btn {
+        width: auto; /* Desktop par button apne text ke hisaab se fit hoga */
+    }
+}
