@@ -130,3 +130,68 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; }
         font-size: 1.85rem;
     }
 }
+/* --- Institute Introduction Section --- */
+.institute-intro {
+    padding: 5rem 1.5rem;
+    background-color: var(--bg, #ffffff);
+}
+
+.intro-container {
+    /* 800px max-width padhne (reading) ke liye best hota hai */
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.intro-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.intro-header h2 {
+    font-size: 2rem;
+    color: var(--text);
+    margin-top: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* Body Content Formatting */
+.intro-body p {
+    font-size: 0.95rem;
+    line-height: 1.8; /* Extra line-height for clean breathing space */
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    text-align: justify; /* Ekdum barabar aur clean edges ke liye */
+}
+
+.intro-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lead Text - Makes the first paragraph stand out */
+.lead-text {
+    font-size: 1.1rem !important;
+    color: var(--text) !important;
+    font-weight: 500;
+}
+
+/* --- Tablet & Desktop Enhancements --- */
+@media (min-width: 768px) {
+    .intro-header {
+        text-align: left;
+    }
+    
+    .intro-body {
+        /* Badi screen par left side me ek patli clean line aayegi */
+        padding-left: 2rem;
+        border-left: 3px solid #f3f4f6; 
+    }
+
+    .intro-body p {
+        font-size: 1rem; /* Slightly larger on desktop */
+        text-align: left; /* Desktop par left align zyada minimal lagta hai */
+    }
+    
+    .lead-text {
+        font-size: 1.15rem !important;
+    }
+}
